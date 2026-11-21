@@ -2,23 +2,28 @@ export const copy = {
   zh: {
     langLabel: '中文',
     nav: {
-      directions: '方向',
-      content: '内容优化',
-      education: 'AI 教学',
+      business: '业务',
       contact: '联系',
       cta: '添加微信',
+      ctaWhatsapp: '添加 WhatsApp',
+      menu: [
+        { href: '#content', label: 'AI 内容服务' },
+        { href: '#education', label: 'AI 教育' },
+        { href: '#materials', label: 'AI 学习资料' },
+        { href: '#business', label: '企业 AI 方案' },
+      ],
     },
     hero: {
       brandZh: '人智工作室',
       brandEn: 'Humanize AI Studio',
-      tagline: '更好的人机协作方式',
-      support: '把 AI 生成的内容，打磨成自然、专业、有个性的作品。',
+      tagline: 'AI为我，我为AI.',
+      support: '帮客户制作更好的 PPT、报告和视觉内容。',
       ctaPrimary: '添加微信咨询',
-      ctaSecondary: '了解四个方向',
+      ctaSecondary: '了解四个业务',
     },
     directions: {
       eyebrow: '业务框架',
-      title: '四个方向',
+      title: '四个业务',
       subtitle: '从内容打磨到教学赋能，帮助人与 AI 更好地协作。',
       items: [
         {
@@ -45,22 +50,15 @@ export const copy = {
         {
           id: 'business',
           title: 'Business AI Solutions',
-          titleZh: '商业 AI 解决方案',
+          titleZh: '企业 AI 方案',
           desc: '帮助小企业改善文档和日常工作流程。',
           href: '#business',
         },
       ],
     },
-    vision: {
-      label: '最终目标',
-      line: '从个人服务 → 标准化产品 → 品牌',
-    },
     content: {
-      eyebrow: '方向一 · 我更看好',
       title: 'AI 内容人工优化',
-      highlight: '高客单价潜力',
       desc: '帮助客户把 AI 生成的 PPT、报告、文案、图片等，优化成自然、专业、有个性风格的作品。',
-      priceLabel: '建议测试价格',
       products: [
         {
           code: 'A',
@@ -72,7 +70,6 @@ export const copy = {
             '修改文字，让表达自然',
             '优化配色、排版和图表',
           ],
-          price: 'S$80–200 / 10页',
         },
         {
           code: 'B',
@@ -84,7 +81,6 @@ export const copy = {
             '调整语气和表达习惯',
             '减少空洞、重复的内容',
           ],
-          price: 'S$30–100 / 篇',
         },
         {
           code: 'C',
@@ -96,7 +92,6 @@ export const copy = {
             '优化科研汇报图表',
             '让图示符合科学逻辑',
           ],
-          price: 'S$50–200 / 张',
         },
         {
           code: 'D',
@@ -108,17 +103,13 @@ export const copy = {
             '优化产品介绍',
             '统一品牌语言和视觉风格',
           ],
-          price: 'S$50–150 / 项目',
         },
       ],
     },
     education: {
-      eyebrow: '方向二 · 容易启动',
       title: 'AI 普及与教学',
-      highlight: '规模化潜力',
       desc: '帮助 AI 初学者、中老年人和非技术人员真正掌握 AI，让他们在生活和工作中用起来。',
       courseTitle: '课程：AI for Everyday Life',
-      courseMeta: '建议时长约 2 小时 · 适合零基础学员',
       modules: [
         { num: '01', title: 'AI 基础使用', desc: '如何提问、语音对话、连续追问' },
         { num: '02', title: '翻译与沟通', desc: '英文邮件、翻译、旅行沟通' },
@@ -129,52 +120,58 @@ export const copy = {
       ],
     },
     materials: {
-      eyebrow: '方向三',
       title: 'AI 学习资料',
       desc: '把课程经验沉淀成可复用的课程包、操作指南和实用模板，让更多人按步骤学会用 AI。',
       points: ['结构化课程讲义', '分场景操作指南', '可直接套用的提示词与模板'],
     },
     business: {
-      eyebrow: '方向四',
-      title: '商业 AI 解决方案',
+      title: '企业 AI 方案',
       desc: '面向小企业，改善文档质量与日常工作流，让 AI 真正进入业务节奏，而不是停留在试用。',
       points: ['文档与报告流程优化', '团队协作中的 AI 使用规范', '可落地的日常效率方案'],
     },
     contact: {
       eyebrow: '联系我们',
       title: '用微信开始对话',
-      desc: '扫码添加微信，或发邮件说明你的需求。我们会尽快回复。',
+      desc: '扫码添加微信，WhatsApp，或发邮件说明你的需求并询价。我们会尽快回复。',
       wechat: '微信二维码',
+      whatsapp: 'WhatsApp 二维码',
       scan: '打开微信扫一扫',
+      scanWhatsapp: '打开 WhatsApp 扫一扫',
       email: '邮箱',
       cta: '添加微信咨询',
+      ctaWhatsapp: '添加 WhatsApp',
     },
     footer: {
       brand: '人智工作室 · Humanize AI Studio',
-      tagline: '更好的人机协作方式',
+      tagline: 'AI为我，我为AI.',
       rights: '© 2026 Humanize AI Studio',
     },
   },
   en: {
     langLabel: 'EN',
     nav: {
-      directions: 'Directions',
-      content: 'Content',
-      education: 'Education',
+      business: 'Business',
       contact: 'Contact',
       cta: 'Add WeChat',
+      ctaWhatsapp: 'Add WhatsApp',
+      menu: [
+        { href: '#content', label: 'AI Content Service' },
+        { href: '#education', label: 'AI Education' },
+        { href: '#materials', label: 'AI Learning Materials' },
+        { href: '#business', label: 'Business AI Solutions' },
+      ],
     },
     hero: {
       brandZh: '人智工作室',
       brandEn: 'Humanize AI Studio',
-      tagline: 'A better way to work with AI',
-      support: 'Turn AI-generated work into natural, professional, and personal results.',
+      tagline: 'AI for me. I for AI.',
+      support: 'Help clients make better PPTs, reports, and visual work.',
       ctaPrimary: 'Add WeChat',
-      ctaSecondary: 'Explore four directions',
+      ctaSecondary: 'Explore four businesses',
     },
     directions: {
       eyebrow: 'Framework',
-      title: 'Four directions',
+      title: 'Four businesses',
       subtitle: 'From content craft to education—helping people collaborate with AI more effectively.',
       items: [
         {
@@ -201,22 +198,15 @@ export const copy = {
         {
           id: 'business',
           title: 'Business AI Solutions',
-          titleZh: '商业 AI 解决方案',
+          titleZh: '企业 AI 方案',
           desc: 'Help small businesses improve documents and daily workflows.',
           href: '#business',
         },
       ],
     },
-    vision: {
-      label: 'Long-term arc',
-      line: 'Personal service → Standard products → Brand',
-    },
     content: {
-      eyebrow: 'Direction 1 · Preferred',
       title: 'AI Content Humanization',
-      highlight: 'High ticket potential',
       desc: 'Help clients turn AI-generated decks, reports, copy, and images into natural, professional, personal work.',
-      priceLabel: 'Suggested test price',
       products: [
         {
           code: 'A',
@@ -228,7 +218,6 @@ export const copy = {
             'Rewrite wording for natural expression',
             'Improve color, layout, and charts',
           ],
-          price: 'S$80–200 / 10 pages',
         },
         {
           code: 'B',
@@ -240,7 +229,6 @@ export const copy = {
             'Adjust tone and expression habits',
             'Cut hollow and repetitive text',
           ],
-          price: 'S$30–100 / piece',
         },
         {
           code: 'C',
@@ -252,7 +240,6 @@ export const copy = {
             'Improve research presentation charts',
             'Align visuals with scientific logic',
           ],
-          price: 'S$50–200 / image',
         },
         {
           code: 'D',
@@ -264,17 +251,13 @@ export const copy = {
             'Improve product descriptions',
             'Unify brand voice and visual style',
           ],
-          price: 'S$50–150 / project',
         },
       ],
     },
     education: {
-      eyebrow: 'Direction 2 · Easy to start',
       title: 'AI Education for Everyone',
-      highlight: 'Scalable potential',
       desc: 'Help beginners, seniors, and non-technical people actually use AI in life and work.',
       courseTitle: 'Course: AI for Everyday Life',
-      courseMeta: 'About 2 hours · Zero-foundation friendly',
       modules: [
         { num: '01', title: 'AI basics', desc: 'Prompting, voice chat, follow-up questions' },
         { num: '02', title: 'Translation & communication', desc: 'English emails, translation, travel talk' },
@@ -285,13 +268,11 @@ export const copy = {
       ],
     },
     materials: {
-      eyebrow: 'Direction 3',
       title: 'AI Learning Materials',
       desc: 'Turn teaching experience into reusable course packs, how-to guides, and practical templates.',
       points: ['Structured course notes', 'Scenario-based guides', 'Ready-to-use prompts and templates'],
     },
     business: {
-      eyebrow: 'Direction 4',
       title: 'Business AI Solutions',
       desc: 'Help small businesses improve document quality and daily workflows so AI becomes part of real operations.',
       points: ['Document and report workflow design', 'Team AI usage norms', 'Practical day-to-day efficiency plans'],
@@ -299,15 +280,18 @@ export const copy = {
     contact: {
       eyebrow: 'Contact',
       title: 'Start on WeChat',
-      desc: 'Scan the QR to add WeChat, or email us with your needs. We reply quickly.',
+      desc: 'Scan to add WeChat or WhatsApp, or email your request and ask for a quote. We reply soon.',
       wechat: 'WeChat QR',
+      whatsapp: 'WhatsApp QR',
       scan: 'Open WeChat and scan',
+      scanWhatsapp: 'Open WhatsApp and scan',
       email: 'Email',
       cta: 'Add WeChat',
+      ctaWhatsapp: 'Add WhatsApp',
     },
     footer: {
       brand: '人智工作室 · Humanize AI Studio',
-      tagline: 'A better way to work with AI',
+      tagline: 'AI for me. I for AI.',
       rights: '© 2026 Humanize AI Studio',
     },
   },

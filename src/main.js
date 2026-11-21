@@ -28,9 +28,14 @@ function productMark(code) {
   return `<span class="product-mark" aria-hidden="true">${code}</span>`;
 }
 
+function menuLinks(items) {
+  return items.map((item) => `<a href="${item.href}">${item.label}</a>`).join('');
+}
+
 function render(lang) {
   const t = copy[lang];
   const app = document.querySelector('#app');
+  const links = menuLinks(t.nav.menu);
 
   app.innerHTML = `
     <div class="atmosphere" aria-hidden="true">
@@ -48,9 +53,15 @@ function render(lang) {
         </span>
       </a>
       <nav class="nav" aria-label="Primary">
-        <a href="#directions">${t.nav.directions}</a>
-        <a href="#content">${t.nav.content}</a>
-        <a href="#education">${t.nav.education}</a>
+        <div class="nav-menu">
+          <button type="button" class="nav-menu-btn" data-biz-toggle aria-expanded="false" aria-haspopup="true" aria-controls="biz-menu">
+            ${t.nav.business}
+            <span class="nav-caret" aria-hidden="true"></span>
+          </button>
+          <div class="nav-dropdown" id="biz-menu">
+            ${links}
+          </div>
+        </div>
         <a href="#contact">${t.nav.contact}</a>
       </nav>
       <div class="header-actions">
@@ -59,6 +70,7 @@ function render(lang) {
           <button type="button" data-lang="en" class="${lang === 'en' ? 'active' : ''}" aria-pressed="${lang === 'en'}">EN</button>
         </div>
         <a class="btn btn-small header-cta" href="#contact">${t.nav.cta}</a>
+        <a class="btn btn-small btn-line header-cta" href="#whatsapp-qr">${t.nav.ctaWhatsapp}</a>
       </div>
       <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false">
         <span></span><span></span>
@@ -66,10 +78,20 @@ function render(lang) {
     </header>
 
     <div class="mobile-nav" hidden>
-      <a href="#directions">${t.nav.directions}</a>
-      <a href="#content">${t.nav.content}</a>
-      <a href="#education">${t.nav.education}</a>
+      <div class="mobile-biz">
+        <button type="button" class="mobile-biz-btn" data-biz-toggle aria-expanded="false" aria-haspopup="true" aria-controls="mobile-biz-menu">
+          <span>${t.nav.business}</span>
+          <span class="nav-caret" aria-hidden="true"></span>
+        </button>
+        <div class="mobile-submenu" id="mobile-biz-menu">
+          ${links}
+        </div>
+      </div>
       <a href="#contact">${t.nav.contact}</a>
+      <div class="mobile-ctas">
+        <a class="btn btn-small" href="#contact">${t.nav.cta}</a>
+        <a class="btn btn-small btn-line" href="#whatsapp-qr">${t.nav.ctaWhatsapp}</a>
+      </div>
       <div class="lang-toggle mobile-lang" role="group" aria-label="Language">
         <button type="button" data-lang="zh" class="${lang === 'zh' ? 'active' : ''}">中文</button>
         <button type="button" data-lang="en" class="${lang === 'en' ? 'active' : ''}">EN</button>
@@ -115,17 +137,11 @@ function render(lang) {
             )
             .join('')}
         </div>
-        <div class="vision reveal">
-          <p class="eyebrow">${t.vision.label}</p>
-          <p class="vision-line">${t.vision.line}</p>
-        </div>
       </section>
 
       <section class="section content-section" id="content">
         <div class="section-head reveal">
-          <p class="eyebrow">${t.content.eyebrow}</p>
           <h2>${t.content.title}</h2>
-          <p class="highlight">${t.content.highlight}</p>
           <p class="lede">${t.content.desc}</p>
         </div>
         <div class="product-list">
@@ -135,9 +151,8 @@ function render(lang) {
             <article class="product reveal delay-${i % 4}">
               ${productMark(p.code)}
               <div class="product-body">
-                <h3>${lang === 'zh' ? `${p.nameZh}` : p.name}<span>${lang === 'zh' ? p.name : p.nameZh}</span></h3>
+                <h3>${lang === 'zh' ? p.nameZh : p.name}<span>${lang === 'zh' ? p.name : p.nameZh}</span></h3>
                 <ul>${p.features.map((f) => `<li>${f}</li>`).join('')}</ul>
-                <p class="price"><span>${t.content.priceLabel}</span> ${p.price}</p>
               </div>
             </article>`
             )
@@ -147,15 +162,12 @@ function render(lang) {
 
       <section class="section education-section" id="education">
         <div class="section-head reveal">
-          <p class="eyebrow">${t.education.eyebrow}</p>
           <h2>${t.education.title}</h2>
-          <p class="highlight alt">${t.education.highlight}</p>
           <p class="lede">${t.education.desc}</p>
         </div>
         <div class="course-panel reveal">
           <div class="course-head">
             <h3>${t.education.courseTitle}</h3>
-            <p>${t.education.courseMeta}</p>
           </div>
           <div class="module-grid">
             ${t.education.modules
@@ -174,13 +186,11 @@ function render(lang) {
 
       <section class="section twin" id="materials">
         <div class="twin-block reveal">
-          <p class="eyebrow">${t.materials.eyebrow}</p>
           <h2>${t.materials.title}</h2>
           <p class="lede">${t.materials.desc}</p>
           <ul class="point-list">${t.materials.points.map((p) => `<li>${p}</li>`).join('')}</ul>
         </div>
         <div class="twin-block reveal delay-1" id="business">
-          <p class="eyebrow">${t.business.eyebrow}</p>
           <h2>${t.business.title}</h2>
           <p class="lede">${t.business.desc}</p>
           <ul class="point-list">${t.business.points.map((p) => `<li>${p}</li>`).join('')}</ul>
@@ -198,12 +208,21 @@ function render(lang) {
               <a href="mailto:2644252432@qq.com">2644252432@qq.com</a>
               <a href="mailto:mr.fuhaizhou@gmail.com">mr.fuhaizhou@gmail.com</a>
             </div>
-            <a class="btn" href="#contact">${t.contact.cta}</a>
+            <div class="contact-actions">
+              <a class="btn" href="#wechat-qr">${t.contact.cta}</a>
+              <a class="btn btn-line" href="#whatsapp-qr">${t.contact.ctaWhatsapp}</a>
+            </div>
           </div>
-          <figure class="qr-panel reveal delay-1">
-            <img src="/wechat-qr.jpg" alt="${t.contact.wechat}" width="280" height="280" />
-            <figcaption>${t.contact.scan}</figcaption>
-          </figure>
+          <div class="qr-row reveal delay-1">
+            <figure class="qr-panel" id="wechat-qr">
+              <img src="/wechat-qr.jpg" alt="${t.contact.wechat}" width="280" height="280" />
+              <figcaption>${t.contact.scan}</figcaption>
+            </figure>
+            <figure class="qr-panel" id="whatsapp-qr">
+              <img src="/whatsapp-qr.png" alt="${t.contact.whatsapp}" width="280" height="280" />
+              <figcaption>${t.contact.scanWhatsapp}</figcaption>
+            </figure>
+          </div>
         </div>
       </section>
     </main>
@@ -221,14 +240,44 @@ function render(lang) {
   observeReveals();
 }
 
+function closeBizMenus() {
+  document.querySelectorAll('[data-biz-toggle]').forEach((btn) => {
+    btn.setAttribute('aria-expanded', 'false');
+  });
+  document.querySelectorAll('.nav-dropdown, .mobile-submenu').forEach((menu) => {
+    menu.classList.remove('is-open');
+  });
+}
+
+function toggleBiz(btn) {
+  const menu = document.getElementById(btn.getAttribute('aria-controls'));
+  const willOpen = btn.getAttribute('aria-expanded') !== 'true';
+  closeBizMenus();
+  if (willOpen && menu) {
+    btn.setAttribute('aria-expanded', 'true');
+    menu.classList.add('is-open');
+  }
+}
+
+function flashWhatsapp() {
+  const el = document.getElementById('whatsapp-qr');
+  if (!el) return;
+  el.classList.remove('qr-hot');
+  void el.offsetWidth;
+  el.classList.add('qr-hot');
+  window.setTimeout(() => el.classList.remove('qr-hot'), 1800);
+}
+
 function bindEvents() {
   const menuBtn = document.querySelector('.menu-btn');
   const mobileNav = document.querySelector('.mobile-nav');
+
   menuBtn?.addEventListener('click', () => {
     const open = mobileNav.hasAttribute('hidden') === false;
     if (open) {
       mobileNav.setAttribute('hidden', '');
       menuBtn.setAttribute('aria-expanded', 'false');
+      closeBizMenus();
     } else {
       mobileNav.removeAttribute('hidden');
       menuBtn.setAttribute('aria-expanded', 'true');
@@ -239,7 +288,42 @@ function bindEvents() {
     a.addEventListener('click', () => {
       mobileNav.setAttribute('hidden', '');
       menuBtn?.setAttribute('aria-expanded', 'false');
+      closeBizMenus();
     });
+  });
+
+  document.querySelectorAll('[data-biz-toggle]').forEach((btn) => {
+    btn.addEventListener('click', (event) => {
+      event.stopPropagation();
+      toggleBiz(btn);
+    });
+  });
+
+  document.querySelectorAll('a[href="#whatsapp-qr"]').forEach((a) => {
+    a.addEventListener('click', () => {
+      window.setTimeout(flashWhatsapp, 60);
+    });
+  });
+}
+
+function bindGlobalEvents() {
+  if (bindGlobalEvents.done) return;
+  bindGlobalEvents.done = true;
+
+  document.addEventListener('click', (event) => {
+    if (event.target.closest('[data-biz-toggle]')) return;
+    closeBizMenus();
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape') return;
+    closeBizMenus();
+    const mobileNav = document.querySelector('.mobile-nav');
+    const menuBtn = document.querySelector('.menu-btn');
+    if (mobileNav && !mobileNav.hasAttribute('hidden')) {
+      mobileNav.setAttribute('hidden', '');
+      menuBtn?.setAttribute('aria-expanded', 'false');
+    }
   });
 }
 
@@ -271,4 +355,5 @@ function observeReveals() {
   nodes.forEach((n) => io.observe(n));
 }
 
+bindGlobalEvents();
 render(getLang());
