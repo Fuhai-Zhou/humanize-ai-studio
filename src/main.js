@@ -19,6 +19,7 @@ function iconFor(id) {
     content: `<svg viewBox="0 0 40 40" aria-hidden="true"><rect x="7" y="9" width="26" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 27h16M15 14h10M15 18h8M15 22h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>`,
     education: `<svg viewBox="0 0 40 40" aria-hidden="true"><path d="M8 17l12-6 12 6-12 6-12-6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 19.5v6.2c0 1.8 3.6 3.3 8 3.3s8-1.5 8-3.3v-6.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M32 17v8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>`,
     materials: `<svg viewBox="0 0 40 40" aria-hidden="true"><path d="M11 10h10.5c2.2 0 4 1.8 4 4v16H15c-2.2 0-4-1.8-4-4V10z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M25.5 10H29c2.2 0 4 1.8 4 4v12c0 2.2-1.8 4-4 4h-7.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M15 16h7M15 20h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>`,
+    recovery: `<svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="10" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M20 14v7l4 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
     business: `<svg viewBox="0 0 40 40" aria-hidden="true"><path d="M10 30V16l6-4 4 3 10-5v20H10z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M16 30v-8h4v8M24 18v2M24 23v2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>`,
   };
   return icons[id] || '';
@@ -70,7 +71,7 @@ function render(lang) {
           <button type="button" data-lang="en" class="${lang === 'en' ? 'active' : ''}" aria-pressed="${lang === 'en'}">EN</button>
         </div>
         <a class="btn btn-small header-cta" href="#contact">${t.nav.cta}</a>
-        <a class="btn btn-small btn-line header-cta" href="#whatsapp-qr">${t.nav.ctaWhatsapp}</a>
+        <a class="btn btn-small header-cta" href="#whatsapp-qr">${t.nav.ctaWhatsapp}</a>
       </div>
       <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false">
         <span></span><span></span>
@@ -90,7 +91,7 @@ function render(lang) {
       <a href="#contact">${t.nav.contact}</a>
       <div class="mobile-ctas">
         <a class="btn btn-small" href="#contact">${t.nav.cta}</a>
-        <a class="btn btn-small btn-line" href="#whatsapp-qr">${t.nav.ctaWhatsapp}</a>
+        <a class="btn btn-small" href="#whatsapp-qr">${t.nav.ctaWhatsapp}</a>
       </div>
       <div class="lang-toggle mobile-lang" role="group" aria-label="Language">
         <button type="button" data-lang="zh" class="${lang === 'zh' ? 'active' : ''}">中文</button>
@@ -107,6 +108,7 @@ function render(lang) {
           <p class="hero-support">${t.hero.support}</p>
           <div class="hero-ctas">
             <a class="btn" href="#contact">${t.hero.ctaPrimary}</a>
+            <a class="btn" href="#whatsapp-qr">${t.hero.ctaWhatsapp}</a>
             <a class="btn btn-ghost" href="#directions">${t.hero.ctaSecondary}</a>
           </div>
         </div>
@@ -158,6 +160,16 @@ function render(lang) {
             )
             .join('')}
         </div>
+      </section>
+
+      <section class="section recovery-section" id="recovery">
+        <div class="section-head reveal">
+          <h2>${t.recovery.title}</h2>
+          <p class="lede">${t.recovery.desc}</p>
+        </div>
+        <ul class="point-list reveal">
+          ${t.recovery.points.map((p) => `<li>${p}</li>`).join('')}
+        </ul>
       </section>
 
       <section class="section education-section" id="education">

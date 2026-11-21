@@ -8,6 +8,7 @@ export const copy = {
       ctaWhatsapp: '添加 WhatsApp',
       menu: [
         { href: '#content', label: 'AI 内容服务' },
+        { href: '#recovery', label: 'AI漫剧等成瘾戒断' },
         { href: '#education', label: 'AI 教育' },
         { href: '#materials', label: 'AI 学习资料' },
         { href: '#business', label: '企业 AI 方案' },
@@ -19,11 +20,12 @@ export const copy = {
       tagline: 'AI为我，我为AI.',
       support: '帮客户制作更好的 PPT、报告和视觉内容。',
       ctaPrimary: '添加微信咨询',
-      ctaSecondary: '了解四个业务',
+      ctaWhatsapp: '添加 WhatsApp 咨询',
+      ctaSecondary: '了解五个业务',
     },
     directions: {
       eyebrow: '业务框架',
-      title: '四个业务',
+      title: '五个业务',
       subtitle: '从内容打磨到教学赋能，帮助人与 AI 更好地协作。',
       items: [
         {
@@ -32,6 +34,13 @@ export const copy = {
           titleZh: 'AI 内容服务',
           desc: '帮客户制作更好的 PPT、报告和视觉内容。',
           href: '#content',
+        },
+        {
+          id: 'recovery',
+          title: 'Recovery from AI-drama addiction',
+          titleZh: 'AI漫剧等成瘾戒断',
+          desc: '面向所有人的咨询与服务。',
+          href: '#recovery',
         },
         {
           id: 'education',
@@ -106,6 +115,16 @@ export const copy = {
         },
       ],
     },
+    recovery: {
+      title: 'AI漫剧等成瘾戒断',
+      desc: '面向所有人的咨询与服务。',
+      points: [
+        '帮你看清 AI 漫剧、短视频带来的成瘾习惯',
+        '一起定可执行的减少计划：时长、时段、替代活动',
+        '给家长或本人可照做的沟通和陪伴方法',
+        '不提供医疗诊断，严重情况建议寻求专业帮助',
+      ],
+    },
     education: {
       title: 'AI 普及与教学',
       desc: '帮助 AI 初学者、中老年人和非技术人员真正掌握 AI，让他们在生活和工作中用起来。',
@@ -156,6 +175,7 @@ export const copy = {
       ctaWhatsapp: 'Add WhatsApp',
       menu: [
         { href: '#content', label: 'AI Content Service' },
+        { href: '#recovery', label: 'Recovery from AI-drama addiction' },
         { href: '#education', label: 'AI Education' },
         { href: '#materials', label: 'AI Learning Materials' },
         { href: '#business', label: 'Business AI Solutions' },
@@ -167,11 +187,12 @@ export const copy = {
       tagline: 'AI for me. I for AI.',
       support: 'Help clients make better PPTs, reports, and visual work.',
       ctaPrimary: 'Add WeChat',
-      ctaSecondary: 'Explore four businesses',
+      ctaWhatsapp: 'Add WhatsApp',
+      ctaSecondary: 'Explore five businesses',
     },
     directions: {
       eyebrow: 'Framework',
-      title: 'Four businesses',
+      title: 'Five businesses',
       subtitle: 'From content craft to education—helping people collaborate with AI more effectively.',
       items: [
         {
@@ -180,6 +201,13 @@ export const copy = {
           titleZh: 'AI 内容服务',
           desc: 'Help clients create better decks, reports, and visual content.',
           href: '#content',
+        },
+        {
+          id: 'recovery',
+          title: 'Recovery from AI-drama addiction',
+          titleZh: 'AI漫剧等成瘾戒断',
+          desc: 'Consulting and service for anyone.',
+          href: '#recovery',
         },
         {
           id: 'education',
@@ -252,6 +280,16 @@ export const copy = {
             'Unify brand voice and visual style',
           ],
         },
+      ],
+    },
+    recovery: {
+      title: 'Recovery from AI-drama addiction',
+      desc: 'Consulting and service for anyone.',
+      points: [
+        'Help you see the addictive habits that come from AI short dramas and short videos.',
+        'Set a practical reduction plan together: how long, which hours, and what to do instead.',
+        'Give parents or the person practical ways to talk and stay alongside.',
+        'This is not a medical diagnosis. If the situation is serious, seek professional help.',
       ],
     },
     education: {
