@@ -150,7 +150,7 @@ export const copy = {
     },
     contact: {
       eyebrow: '联系我们',
-      title: '用微信开始对话',
+      title: '开始对话',
       desc: '扫码添加微信，WhatsApp，或发邮件说明你的需求并询价。我们会尽快回复。',
       wechat: '微信二维码',
       whatsapp: 'WhatsApp 二维码',
@@ -158,7 +158,7 @@ export const copy = {
       scanWhatsapp: '打开 WhatsApp 扫一扫',
       email: '邮箱',
       cta: '添加微信咨询',
-      ctaWhatsapp: '添加 WhatsApp',
+      ctaWhatsapp: '添加 WhatsApp 咨询',
     },
     footer: {
       brand: '人智工作室 · Humanize AI Studio',
@@ -317,7 +317,7 @@ export const copy = {
     },
     contact: {
       eyebrow: 'Contact',
-      title: 'Start on WeChat',
+      title: 'Start a conversation',
       desc: 'Scan to add WeChat or WhatsApp, or email your request and ask for a quote. We reply soon.',
       wechat: 'WeChat QR',
       whatsapp: 'WhatsApp QR',

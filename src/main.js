@@ -147,13 +147,13 @@ function render(lang) {
           <p class="lede">${t.content.desc}</p>
         </div>
         <div class="product-list">
-          ${t.content.products
+          ${copy.zh.content.products
             .map(
               (p, i) => `
             <article class="product reveal delay-${i % 4}">
               ${productMark(p.code)}
               <div class="product-body">
-                <h3>${lang === 'zh' ? p.nameZh : p.name}<span>${lang === 'zh' ? p.name : p.nameZh}</span></h3>
+                <h3>${p.nameZh}</h3>
                 <ul>${p.features.map((f) => `<li>${f}</li>`).join('')}</ul>
               </div>
             </article>`
@@ -222,7 +222,7 @@ function render(lang) {
             </div>
             <div class="contact-actions">
               <a class="btn" href="#wechat-qr">${t.contact.cta}</a>
-              <a class="btn btn-line" href="#whatsapp-qr">${t.contact.ctaWhatsapp}</a>
+              <a class="btn" href="#whatsapp-qr">${t.contact.ctaWhatsapp}</a>
             </div>
           </div>
           <div class="qr-row reveal delay-1">
