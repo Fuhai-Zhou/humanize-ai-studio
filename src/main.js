@@ -130,7 +130,7 @@ function render(lang) {
               <span class="direction-icon">${iconFor(item.id)}</span>
               <span class="direction-titles">
                 <strong>${lang === 'zh' ? item.titleZh : item.title}</strong>
-                <em>${lang === 'zh' ? item.title : item.titleZh}</em>
+                ${lang === 'zh' ? '' : `<em>${item.titleZh}</em>`}
               </span>
               <span class="direction-desc">${item.desc}</span>
               <span class="direction-arrow" aria-hidden="true">→</span>
