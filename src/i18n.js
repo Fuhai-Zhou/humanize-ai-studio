@@ -116,7 +116,7 @@ export const copy = {
     },
     recovery: {
       title: 'AI漫剧等成瘾戒断',
-      desc: '面向所有人的咨询与服务。',
+      desc: '理解，欣赏，但不沉迷成瘾影响正常生活。',
       points: [
         '帮你看清 AI 漫剧、短视频带来的成瘾习惯',
         '一起定可执行的减少计划：时长、时段、替代活动',
@@ -127,7 +127,7 @@ export const copy = {
     education: {
       title: 'AI 普及与教学',
       desc: '帮助 AI 初学者、中老年人和非技术人员真正掌握 AI，让他们在生活和工作中用起来。',
-      courseTitle: '课程：AI for Everyday Life',
+      courseTitle: '课程：AI的日常广泛使用',
       modules: [
         { num: '01', title: 'AI 基础使用', desc: '如何提问、语音对话、连续追问' },
         { num: '02', title: '翻译与沟通', desc: '英文邮件、翻译、旅行沟通' },
@@ -282,7 +282,7 @@ export const copy = {
     },
     recovery: {
       title: 'Recovery from AI-drama addiction',
-      desc: 'Consulting and service for anyone.',
+      desc: 'Understand it, enjoy it, and do not let addiction disrupt ordinary life.',
       points: [
         'Help you see the addictive habits that come from AI short dramas and short videos.',
         'Set a practical reduction plan together: how long, which hours, and what to do instead.',
@@ -293,7 +293,7 @@ export const copy = {
     education: {
       title: 'AI Education for Everyone',
       desc: 'Help beginners, seniors, and non-technical people actually use AI in life and work.',
-      courseTitle: 'Course: AI for Everyday Life',
+      courseTitle: 'Course: Everyday, widespread use of AI',
       modules: [
         { num: '01', title: 'AI basics', desc: 'Prompting, voice chat, follow-up questions' },
         { num: '02', title: 'Translation & communication', desc: 'English emails, translation, travel talk' },

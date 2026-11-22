@@ -143,7 +143,7 @@ function render(lang) {
       <section class="section content-section" id="content">
         <div class="section-head reveal">
           <h2>${t.content.title}</h2>
-          <p class="lede">${t.content.desc}</p>
+          <p class="lede content-intro">${t.content.desc}</p>
         </div>
         <div class="product-list">
           ${copy.zh.content.products
