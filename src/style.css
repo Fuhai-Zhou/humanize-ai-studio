@@ -33,11 +33,9 @@ body {
   margin: 0;
   color: var(--ink);
   font-family: var(--font-ui);
-  background-color: #d7f2ff;
-  background-image:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0) 52%),
-    linear-gradient(180deg, #6fbeff 0%, #b9e6ff 100%);
-  background-size: 100% 860px, 100% 1420px;
+  background-color: #f7fbfe;
+  background-image: linear-gradient(180deg, #fcfeff 0%, #f7fbfe 100%);
+  background-size: 100% 1500px;
   background-repeat: no-repeat;
   background-position: top;
   min-height: 100vh;
@@ -109,7 +107,7 @@ button {
 .grain {
   position: absolute;
   inset: 0;
-  opacity: 0.035;
+  opacity: 0.02;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
@@ -132,7 +130,7 @@ button {
   gap: 1.25rem;
   padding: 0.9rem clamp(1rem, 4vw, 2rem);
   backdrop-filter: blur(14px);
-  background: rgba(232, 246, 255, 0.72);
+  background: rgba(252, 254, 255, 0.78);
   border-bottom: 1px solid var(--line);
 }
 
@@ -309,7 +307,7 @@ button {
   display: grid;
   gap: 0.85rem;
   padding: 1rem clamp(1rem, 4vw, 2rem) 1.25rem;
-  background: rgba(232, 246, 255, 0.96);
+  background: rgba(252, 254, 255, 0.96);
   border-bottom: 1px solid var(--line);
 }
 
@@ -424,7 +422,7 @@ button {
   position: absolute;
   inset: auto 0 0 0;
   height: 55%;
-  background: linear-gradient(180deg, transparent, rgba(126, 198, 255, 0.16));
+  background: linear-gradient(180deg, transparent, rgba(186, 214, 232, 0.14));
   mask-image: linear-gradient(180deg, transparent, #000 35%);
 }
 
