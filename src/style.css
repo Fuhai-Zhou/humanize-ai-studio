@@ -837,12 +837,18 @@ section[id],
 }
 
 .qr-panel img {
+  display: block;
   width: 100%;
+  height: auto;
   aspect-ratio: 1;
   object-fit: contain;
   border-radius: 18px;
   background: white;
   padding: 0.55rem;
+}
+
+#wechat-qr img {
+  object-fit: cover;
 }
 
 .qr-panel.qr-hot img {
