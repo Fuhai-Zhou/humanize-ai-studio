@@ -33,11 +33,13 @@ body {
   margin: 0;
   color: var(--ink);
   font-family: var(--font-ui);
-  background:
-    radial-gradient(1100px 720px at 86% -12%, rgba(176, 216, 255, 0.85), transparent 58%),
-    radial-gradient(860px 640px at -12% 16%, rgba(126, 190, 255, 0.42), transparent 56%),
-    radial-gradient(720px 520px at 55% 108%, rgba(214, 234, 255, 0.95), transparent 52%),
-    linear-gradient(180deg, #f5faff 0%, #e4f2ff 46%, #f7fbff 100%);
+  background-color: #d7f2ff;
+  background-image:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0) 52%),
+    linear-gradient(180deg, #6fbeff 0%, #b9e6ff 100%);
+  background-size: 100% 860px, 100% 1420px;
+  background-repeat: no-repeat;
+  background-position: top;
   min-height: 100vh;
   line-height: 1.6;
   overflow-x: hidden;
@@ -83,7 +85,7 @@ button {
   position: absolute;
   border-radius: 50%;
   filter: blur(40px);
-  opacity: 0.55;
+  opacity: 0;
   animation: drift 18s ease-in-out infinite;
 }
 
@@ -130,7 +132,7 @@ button {
   gap: 1.25rem;
   padding: 0.9rem clamp(1rem, 4vw, 2rem);
   backdrop-filter: blur(14px);
-  background: rgba(244, 250, 255, 0.78);
+  background: rgba(232, 246, 255, 0.72);
   border-bottom: 1px solid var(--line);
 }
 
@@ -307,7 +309,7 @@ button {
   display: grid;
   gap: 0.85rem;
   padding: 1rem clamp(1rem, 4vw, 2rem) 1.25rem;
-  background: rgba(244, 250, 255, 0.96);
+  background: rgba(232, 246, 255, 0.96);
   border-bottom: 1px solid var(--line);
 }
 
@@ -422,13 +424,7 @@ button {
   position: absolute;
   inset: auto 0 0 0;
   height: 55%;
-  background:
-    linear-gradient(180deg, transparent, rgba(150, 196, 245, 0.16) 32%, rgba(126, 186, 245, 0.28)),
-    repeating-linear-gradient(
-      -18deg,
-      transparent 0 18px,
-      rgba(90, 150, 210, 0.045) 18px 19px
-    );
+  background: linear-gradient(180deg, transparent, rgba(126, 198, 255, 0.16));
   mask-image: linear-gradient(180deg, transparent, #000 35%);
 }
 
