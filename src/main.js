@@ -105,7 +105,6 @@ function render(lang) {
           <p class="brand-zh">${t.hero.brandZh}</p>
           <h1 class="brand-en">${t.hero.brandEn}</h1>
           <p class="hero-tagline">${t.hero.tagline}</p>
-          <p class="hero-support">${t.hero.support}</p>
           <div class="hero-ctas">
             <a class="btn" href="#contact">${t.hero.ctaPrimary}</a>
             <a class="btn" href="#whatsapp-qr">${t.hero.ctaWhatsapp}</a>

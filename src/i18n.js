@@ -18,7 +18,6 @@ export const copy = {
       brandZh: '人智工作室',
       brandEn: 'Humanize AI Studio',
       tagline: 'AI为我，我为AI.',
-      support: '帮客户制作更好的 PPT、报告和视觉内容。',
       ctaPrimary: '添加微信咨询',
       ctaWhatsapp: '添加 WhatsApp 咨询',
       ctaSecondary: '了解五个业务',
@@ -32,7 +31,7 @@ export const copy = {
           id: 'content',
           title: 'AI Content Service',
           titleZh: 'AI 内容服务',
-          desc: '帮客户制作更好的 PPT、报告和视觉内容。',
+          desc: '把 AI 生成的内容，打磨成自然、专业、有个性的作品。',
           href: '#content',
         },
         {
@@ -185,7 +184,6 @@ export const copy = {
       brandZh: '人智工作室',
       brandEn: 'Humanize AI Studio',
       tagline: 'AI for me. I for AI.',
-      support: 'Help clients make better PPTs, reports, and visual work.',
       ctaPrimary: 'Add WeChat',
       ctaWhatsapp: 'Add WhatsApp',
       ctaSecondary: 'Explore five businesses',
@@ -199,7 +197,7 @@ export const copy = {
           id: 'content',
           title: 'AI Content Service',
           titleZh: 'AI 内容服务',
-          desc: 'Help clients create better decks, reports, and visual content.',
+          desc: 'Turn AI-generated work into natural, professional, and personal results.',
           href: '#content',
         },
         {
